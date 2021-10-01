@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="divider">
+      <div class="container">
+        <div class="card">
+          <div class="card-title">
+            <h3>CALCULADORA IMC</h3>
+          </div>
+          <div class="card-content">
+            <h5>Descubre su indice de masa corporal</h5>
+            <div class="input-form">
+              <label>Sexo</label>
+              <div class="gender-selector">
+                <div class="gender">
+                  <div class="gender-option">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      value="1"
+                      checked="checked"
+                    />
+                    <label for="male">Male</label>
+                  </div>
+                  <div class="gender-option">
+                    <input type="radio" name="gender" id="female" value="2" />
+                    <label for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-form">
+              <label for="age">Edad</label>
+              <input type="number" name="age" id="age" class="input" min="0" />
+            </div>
+            <div class="input-form">
+              <label for="weight">Peso</label>
+              <input
+                type="number"
+                name="weight"
+                id="weight"
+                class="input"
+                min="0"
+                placeholder="Kilogramos"
+              />
+            </div>
+            <div class="input-form">
+              <label for="height">Altura</label>
+              <input
+                type="number"
+                name="height"
+                id="height"
+                class="input"
+                min="0"
+                placeholder="Metros"
+              />
+            </div>
+            <button id="calculate" onclick="calculate()">CALCULAR IMC</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="card-title">
+            <h3>RESULTADOS</h3>
+          </div>
+          <div class="card-content">
+            <label> Resultado: <strong id="result"></strong> </label>
+            <div class="inner-card">
+              Peso ideal:<strong id="ideal-wieght"></strong>
+              <hr />
+              <ul>
+                <li class="bajo-peso">Bajo peso</li>
+                <li class="saludable">Saludable</li>
+                <li class="exceso-peso">Exceso de peso</li>
+                <li class="obeso">Obeso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
